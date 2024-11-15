@@ -6,9 +6,11 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:52:29 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/14 11:13:26 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:39:41 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

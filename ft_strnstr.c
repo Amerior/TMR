@@ -6,9 +6,11 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:52:34 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/15 14:16:31 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:41:26 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -6,13 +6,13 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:43:15 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/15 12:06:14 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:44:06 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	print_fd(long nb, int fd)
+static void	print_nb(long nb, int fd)
 {
 	if (nb / 10)
 	{

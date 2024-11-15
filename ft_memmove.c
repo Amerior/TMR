@@ -6,9 +6,11 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:52:22 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/13 12:27:05 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:41:26 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

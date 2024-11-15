@@ -6,10 +6,14 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:42:55 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/15 14:01:50 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:42:37 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+// 	(void)set;
+// 	return (s1);
+// }

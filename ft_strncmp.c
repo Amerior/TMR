@@ -6,18 +6,19 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:52:32 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/14 11:57:33 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/15 15:41:26 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	i;
+#include "libft.h"
 
-	i = 0;
-	while (i < n && s1[i] == s2[i])
-		i++;
-	if (i < n)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	return (0);
+int	ft_strncmp(const char *s1, const char *s2, size_t n) {
+  size_t i;
+
+  i = 0;
+  while (i < n && s1[i] == s2[i])
+    i++;
+  if (i < n)
+    return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+  return (0);
 }
