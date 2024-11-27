@@ -6,7 +6,7 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:23:47 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/14 13:24:39 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/23 11:42:11 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
+	if (fd == -1)
+		return ;
 	while (s[i])
 		i++;
 	write(fd, s, i);

@@ -6,7 +6,7 @@
 #    By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 11:22:17 by sdu               #+#    #+#              #
-#    Updated: 2024/11/14 18:51:50 by sdu              ###   ########.fr        #
+#    Updated: 2024/11/26 17:46:07 by sdu              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,12 @@ SRC			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 						ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
 							ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 								ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+								
+SRCBONUS	= ft_lstsize_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstadd_back_bonus.c \
+				ft_lstlast_bonus.c ft_lstiter_bonus.c ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstmap_bonus.c
 OBJ			= $(SRC:.c=.o)
-HEADER		= libft.h
+OBJBONUS	= $(SRCBONUS:.c=.o)
+
 
 all: $(NAME)
 
@@ -30,13 +34,17 @@ $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 srcs/%.o: srcs/%.c
-	$(CC) $(CFLAGS) -I $(HEADER) -c $< -o $@ 
+	$(CC) $(CFLAGS) -c $< -o $@ 
+
+bonus: $(OBJ) $(OBJBONUS)
+				$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJBONUS)
+
 clean:
-		rm -f $(OBJ)
+		rm -f $(OBJ) $(OBJBONUS)
 
 fclean: clean
 		rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

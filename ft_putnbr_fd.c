@@ -6,31 +6,27 @@
 /*   By: sdu <sdu@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:43:15 by sdu               #+#    #+#             */
-/*   Updated: 2024/11/15 15:44:06 by sdu              ###   ########.fr       */
+/*   Updated: 2024/11/23 11:42:15 by sdu              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	print_nb(long nb, int fd)
-{
-	if (nb / 10)
-	{
-		print_nb(nb / 10, fd);
-		print_nb(nb % 10, fd);
-	}
-	ft_putchar_fd(nb + '0', fd);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb;
-
-	nb = n;
-	if (nb < 0)
+	if (fd == -1)
+		return ;
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
 	{
-		write(fd, "-", 1);
-		nb = -nb;
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			n *= -1;
+		}
+		if (n > 9)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd((n % 10) + '0', fd);
 	}
-	print_nb(nb, fd);
 }
